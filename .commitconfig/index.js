@@ -1,4 +1,5 @@
 const inquirer = require("inquirer");
+const validate = require('./validate')
 
 module.exports = {
   prompter: prompter,
@@ -12,7 +13,7 @@ const questions = [
     type: "input",
     name: "message",
     message: "GitHub commit message (required):\n",
-    validate: exists,
+    validate: validate.exists,
   },
   {
     type: "input",
@@ -31,14 +32,13 @@ const questions = [
   },
 ];
 
-function prompter(cz, commit) {
-  inquirer.prompt(questions).then((answers) => {
-    formatCommit(commit, answers);
-  });
+function filter(array) {
+	return array.filter((item) => {
+		return !!item;
+	});
 }
 
 function formatCommit(commit, answers) {
-    // you might want to consider conditional chaining here
   commit(
     filter([
       answers.message,
@@ -49,15 +49,9 @@ function formatCommit(commit, answers) {
   );
 }
 
-function filter(array) {
-  return array.filter(function (item) {
-    return !!item;
+function prompter(cz, commit) {
+  inquirer.prompt(questions).then((answers) => {
+    formatCommit(commit, answers);
   });
 }
 
-function exists(input) {
-  if (input) {
-    return true;
-  }
-  return "input required";
-}

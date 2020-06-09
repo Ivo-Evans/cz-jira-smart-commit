@@ -43,7 +43,7 @@ To add a question, you need ask it by adding to the the array passed to inquirer
 
 Questions in the array passed to inquirer.prompt are a series of objects. Each one should have a type property (`type: 'input'` is a good place to start), a name for the question, and a message that the user will see as a prompt.
 
-Question objects take a function called validate as an optional property. I've included a helper validate function called exists. If you want to make an answer required you can add `validate: exists`. You can also look at exists() for the expected input and output of validate functions. If you're curious about input types or validate functions, head over to the [inquirer.js docs](https://www.npmjs.com/package/inquirer).
+Question objects take a function called validate as an optional property. I've included a helper validate function called exists. If you want to make an answer required you can add `validate: validate.exists`. You can also look at exists() for the expected input and output of validate functions. If you're curious about input types or validate functions, head over to the [inquirer.js docs](https://www.npmjs.com/package/inquirer).
 
 Adding questions to the array of objects makes them available in the answers object. Each answer is a value keyed to the name you gave the question. So, to put to the answers to questions in your commit message, access them by their names in the formatCommit function.
 
