@@ -7,7 +7,6 @@ module.exports = {
 };
 
 // This is a set up for the github project board, with co-working in mind.
-
 const questions = [
   {
     type: "input",
@@ -32,20 +31,15 @@ const questions = [
   },
 ];
 
-function filter(array) {
-	return array.filter((item) => {
-		return !!item;
-	});
-}
-
 function formatCommit(commit, answers) {
-  commit(
-    filter([
+  commit([
       answers.message,
       answers.closes ? "\nCloses #" + answers.closes : undefined,
       answers.references ? "\nRelates #" + answers.references.split(" ").join(" #") : undefined,
       answers.coauthorship ? "\n\n" + answers.coauthorship : undefined
-    ]).join(" ")
+    ]
+    .filter(answer => !!answer)
+    .join(" ")
   );
 }
 

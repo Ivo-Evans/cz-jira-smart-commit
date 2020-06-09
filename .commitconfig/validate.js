@@ -5,4 +5,4 @@ function exists(str) {
 	return 'input required';
 }
 
-module.exports = {validate}
+module.exports = { exists }
