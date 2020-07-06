@@ -10,23 +10,9 @@ Be a transparent commitizen.
 
 Forked from [cz-jira-smart-commit](https://www.npmjs.com/package/cz-jira-smart-commit).
 
-Finally, I can't believe that I live in a world where this needs to be said, but it does: Black Lives Matter.
-
 ## Installation
 
-1. If you don't already have commitizen, install it:
-   ```
-   npm install -g commitizen
-   ```
-2. Install this adapter
-   ```
-   npm i -D transparent-commitizen
-   ```
-3. Copy .commitconfig into the top level of your project
-   ```
-   cp -r node_modules/transparent-commitizen/.commitconfig/ .commitconfig
-   ```
-4. Add this line to your package.json
+If you don't already have commitizen, install it with `npm install -g commitizen`. Install this adapter with `npm i -D transparent-commitizen`. Copy the relevant files up to your root by entering `transparent-commitizen`. This will create a `.commitconfig` folder in your project, with your commit configuration. Finally reference the commit config in your package.json: 
    ```
      "config": {
        "commitizen": {
