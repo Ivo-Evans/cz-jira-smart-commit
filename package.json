@@ -20,5 +20,6 @@
   "bugs": {
     "url": "https://github.com/Ivo-Evans/transparent-commitizen/issues"
   },
-  "homepage": "https://github.com/Ivo-Evans/transparent-commitizen#readme"
+  "homepage": "https://github.com/Ivo-Evans/transparent-commitizen#readme",
+  "bin": "cli.js"
 }
