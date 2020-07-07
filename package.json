@@ -21,5 +21,9 @@
     "url": "https://github.com/Ivo-Evans/transparent-commitizen/issues"
   },
   "homepage": "https://github.com/Ivo-Evans/transparent-commitizen#readme",
-  "bin": "cli.js"
+  "bin": "cli.js",
+  "dependencies": {
+    "read-pkg": "^5.2.0",
+    "write-pkg": "^4.0.0"
+  }
 }

@@ -12,14 +12,14 @@ Forked from [cz-jira-smart-commit](https://www.npmjs.com/package/cz-jira-smart-c
 
 ## Installation
 
-If you don't already have commitizen, install it with `npm install -g commitizen`. Install this adapter with `npm i -D transparent-commitizen`. Copy the relevant files up to your root by entering `transparent-commitizen`. This will create a `.commitconfig` folder in your project, with your commit configuration. Finally reference the commit config in your package.json: 
-   ```
-     "config": {
-       "commitizen": {
-         "path": "./.commitconfig"
-       }
-     }
-   ```
+```
+npm i -D transparent-commitizen
+transparent-commitizen # This command configures tc
+```
+
+This will create a .commitconfig folder in the root of your project and modify your package.json. You can then edit your commit config by editing index.js.
+
+If you haven't already installed commitizen itself, you'll need to do so with `npm i -g commitizen`
 
 ## Writing your own questions and format
 
